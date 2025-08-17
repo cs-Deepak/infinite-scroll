@@ -1,0 +1,141 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+}
+
+/* Left Side Text */
+.hero-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.hero-name {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin: 10px 0;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-role {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.highlight {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+.hero-greet {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  margin: 20px 0 10px;
+}
+
+.hero-intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* Right Side Image */
+.hero-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(100%) contrast(120%) brightness(110%);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+  filter: grayscale(0%) contrast(100%) brightness(100%);
+  transform: scale(1.05);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 40px 5%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-greet {
+    font-size: 2.2rem;
+  }
+
+  .profile-img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-role {
+    font-size: 1.2rem;
+  }
+
+  .hero-greet {
+    font-size: 1.8rem;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+}

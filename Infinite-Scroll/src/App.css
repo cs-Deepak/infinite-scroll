@@ -1,8 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+/* Dancing Script utility classes */
+.dancing-regular {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+}
+
+.dancing-medium {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 500;
+}
+
+.dancing-semibold {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+}
+
+.dancing-bold {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}
+
+
+/* Default body font */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Utility font classes */
+.poppins-light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.poppins-extrabold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(0, 0, 0.6);
+  background-image: url("./assets/liquid.jpg");
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+  background-size: 425px;
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
 }
 
 .logo {
@@ -39,4 +98,131 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.button {
+  display: flex;
+  gap: 5px;
+}
+
+.studentCard {
+  border: 2px solid gray;
+  margin: 15px;
+  border-radius: 20px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding-right: 0px;
+}
+
+.studentCard h2 {
+  color: rgb(217, 83, 83);
+}
+
+.studentCard img {
+  width: 130px;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 12%;
+  margin-top: 10px;
+}
+
+/* Demo */
+
+.main-demo {
+  /* position: relative; */
+  max-width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: normal;
+  background-color: #E1DAD8;
+}
+
+.main-demo .img-demo {
+  display: flex;
+  align-items: right;
+}
+
+.main-demo .text-demo {
+  padding-bottom: 100px;
+  color: black;
+}
+
+.portfolio-text {
+  max-width:100% ;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  margin-right: 20%;
+  padding-right: 80px;
+  margin-bottom: 275px;
+  
+  
+}
+
+.portfolio-text .title {
+  font-size: 170px;
+  font-family: "Roboto", sans-serif;
+ 
+}
+
+.portfolio-text .para1 {
+  font-size: 40px;
+  position: absolute;
+  display: flex;
+  top: 190px;
+  left: 800px;
+}
+.portfolio-text .para2 {
+  position: absolute;
+  top: 238px;
+  left: 550px;
+  font-size: 30px;
+}
+
+.back-water {
+  position: absolute;
+
+  mix-blend-mode: screen;
+}
+
+
+.para1 {
+   font-family: 'Dancing Script', cursive;
+   text-shadow: 5px 2px 5px rgb(0, 0, 0); 
+  color: #FFD700;
+}
+
+
+.para2 {
+   font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.highlight {
+  color: #FFD700; /* yellow */
+}
+
+
+.namste {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; /* bold */
+  font-size: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
