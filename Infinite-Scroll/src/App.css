@@ -1,228 +1,163 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;  /* prevent horizontal scroll */
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Root container */
+#root, .main {
+  width: 100%;
+  min-height: 100vh;
+}
 
 /* Dancing Script utility classes */
-.dancing-regular {
-  font-family: 'Dancing Script', cursive;
-  font-weight: 400;
-}
+.dancing-regular { font-family: 'Dancing Script', cursive; font-weight: 400; }
+.dancing-medium { font-family: 'Dancing Script', cursive; font-weight: 500; }
+.dancing-semibold { font-family: 'Dancing Script', cursive; font-weight: 600; }
+.dancing-bold { font-family: 'Dancing Script', cursive; font-weight: 700; }
 
-.dancing-medium {
-  font-family: 'Dancing Script', cursive;
-  font-weight: 500;
-}
+/* Poppins utility */
+.poppins-light { font-weight: 300; }
+.poppins-regular { font-weight: 400; }
+.poppins-semibold { font-weight: 600; }
+.poppins-bold { font-weight: 700; }
+.poppins-extrabold { font-weight: 900; }
 
-.dancing-semibold {
-  font-family: 'Dancing Script', cursive;
-  font-weight: 600;
-}
-
-.dancing-bold {
-  font-family: 'Dancing Script', cursive;
-  font-weight: 700;
-}
-
-
-/* Default body font */
+/* Body background */
 body {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Utility font classes */
-.poppins-light {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-}
-
-.poppins-regular {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-.poppins-semibold {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
-
-.poppins-bold {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-
-.poppins-extrabold {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  background-color: rgb(0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   background-image: url("./assets/liquid.jpg");
   background-repeat: no-repeat;
   background-blend-mode: screen;
   background-size: 425px;
-  /* background-size: cover; */
-  /* background-attachment: fixed; */
 }
 
+/* Logo */
 .logo {
   height: 6em;
   padding: 1.5em;
-  will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+.logo:hover { filter: drop-shadow(0 0 2em #646cffaa); }
+.logo.react:hover { filter: drop-shadow(0 0 2em #61dafbaa); }
 
+/* Spin animation */
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-.card {
-  padding: 2em;
-}
+.card { padding: 2em; }
+.read-the-docs { color: #888; }
+.button { display: flex; gap: 5px; }
 
-.read-the-docs {
-  color: #888;
-}
-
-.button {
-  display: flex;
-  gap: 5px;
-}
-
+/* Student Card */
 .studentCard {
   border: 2px solid gray;
   margin: 15px;
   border-radius: 20px;
-  text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  text-align: center;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  padding-right: 0px;
+  width: 280px;
+  background: #fff;
 }
-
-.studentCard h2 {
-  color: rgb(217, 83, 83);
-}
-
+.studentCard h2 { color: rgb(217, 83, 83); }
 .studentCard img {
-  width: 130px;
-  align-items: center;
+  width: 120px;
   border: 2px solid gray;
   border-radius: 12%;
-  margin-top: 10px;
+  margin: 10px auto;
 }
 
-/* Demo */
-
+/* Demo section */
 .main-demo {
-  /* position: relative; */
-  max-width: 100%;
+  width: 100%;
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap;
   justify-content: space-between;
-  text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
-  line-height: normal;
+  align-items: center;
+  padding: 40px 20px;
   background-color: #E1DAD8;
+  text-align: left;
 }
-
 .main-demo .img-demo {
+  flex: 1;
   display: flex;
-  align-items: right;
+  justify-content: center;
 }
-
 .main-demo .text-demo {
-  padding-bottom: 100px;
+  flex: 1;
   color: black;
+  padding: 20px;
 }
 
+/* Portfolio text */
 .portfolio-text {
-  max-width:100% ;
-  position: relative;
   display: flex;
   flex-direction: column;
-  text-align: end;
-  margin-right: 20%;
-  padding-right: 80px;
-  margin-bottom: 275px;
-  
-  
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
 }
-
 .portfolio-text .title {
-  font-size: 170px;
+  font-size: 5rem;
   font-family: "Roboto", sans-serif;
- 
+  line-height: 1.2;
 }
-
 .portfolio-text .para1 {
-  font-size: 40px;
-  position: absolute;
-  display: flex;
-  top: 190px;
-  left: 800px;
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  color: #FFD700;
+  text-shadow: 3px 2px 5px rgb(0, 0, 0); 
+  margin-top: 10px;
 }
 .portfolio-text .para2 {
-  position: absolute;
-  top: 238px;
-  left: 550px;
-  font-size: 30px;
-}
-
-.back-water {
-  position: absolute;
-
-  mix-blend-mode: screen;
-}
-
-
-.para1 {
-   font-family: 'Dancing Script', cursive;
-   text-shadow: 5px 2px 5px rgb(0, 0, 0); 
-  color: #FFD700;
-}
-
-
-.para2 {
-   font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-    font-family: 'Poppins', sans-serif;
-  font-weight: 300; /* Light */
   font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  margin-top: 10px;
 }
-
-.highlight {
-  color: #FFD700; /* yellow */
-}
-
+.highlight { color: #FFD700; }
 
 .namste {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900; /* bold */
-  font-size: 80px;
+  font-weight: 900;
+  font-size: 3rem;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .portfolio-text .title { font-size: 4rem; }
+  .portfolio-text .para1 { font-size: 1.8rem; }
+  .namste { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .main-demo { flex-direction: column; text-align: center; }
+  .portfolio-text { align-items: center; text-align: center; }
+  .portfolio-text .title { font-size: 3rem; }
+  .portfolio-text .para1 { font-size: 1.5rem; }
+  .portfolio-text .para2 { font-size: 1rem; }
+  .namste { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .portfolio-text .title { font-size: 2.2rem; }
+  .portfolio-text .para1 { font-size: 1.2rem; }
+  .portfolio-text .para2 { font-size: 0.9rem; }
+  .namste { font-size: 1.8rem; }
+  .studentCard { width: 100%; }
 }
