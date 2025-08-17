@@ -74,3 +74,10 @@
   background: #222;
   color: #fff;
 }
+
+.demo-live-buttom:hover{
+  background: #007bff;
+  color: #222;
+}
+
+

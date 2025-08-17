@@ -1,33 +1,40 @@
 import React from "react";
-import profile from "../assets/profile.jpg"; // apna image path
-import "./Hero.css"; // neeche CSS milegi
+import profile from "../assets/profile.jpg"; 
+import pro from "../assets/port.jpg"
+import "./Hero.css";
+import silver from "../assets/liquid.jpg"; // left side silver texture (tum jo image diya hai usko use karna)
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
-      {/* Left Content */}
-      <div className="hero-text">
-        <h1 className="hero-title">Portfolio</h1>
-        <p className="hero-name">Deepak Kumar Yadav</p>
-        <p className="hero-role">
-          MERN <span className="highlight">STACK</span> Developer
-        </p>
 
-        <h2 className="hero-greet">Namaste 🙏</h2>
-        <p className="hero-intro">
-          I am Deepak Yadav, a passionate and self-made Web Developer with a
-          strong focus on <span className="highlight">creative design</span> and
-          modern web technologies.
-        </p>
+      {/* Left Side */}
+      <div className="hero-left">
+        
+      
+        <img  src={silver} alt="silver effect" className="silver-effect" />
+        <div className="hero-text">
+          <img className="hero-title"  src={pro} alt="" />
+          {/* <h1 className="hero-title">DEEPAK KUMAR <br /> YADAV</h1>
+          <h2 className="hero-role">MERN STACK DEVELOPER</h2> */}
+
+          <img src="" alt="" />
+          <p className="hero-intro">
+            Hey, I’m <span className="highlight">Deepak 👋</span> A web developer who loves crafting 
+            beautiful, functional websites. I turn ideas into clean, responsive, 
+            and modern digital experiences.
+          </p>
+
+          <div className="hero-buttons">
+            <a href="#projects" className="btn primary">View Projects</a>
+            <a href="#contact" className="btn secondary">Contact Me</a>
+          </div>
+        </div>
       </div>
 
-      {/* Right Image */}
-      <div className="hero-image">
-        <img
-          src={profile}
-          alt="Profile"
-          className="profile-img"
-        />
+      {/* Right Side */}
+      <div className="hero-right">
+        <img src={profile} alt="Profile" className="profile-img" />
       </div>
     </section>
   );
