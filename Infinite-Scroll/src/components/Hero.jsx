@@ -14,7 +14,7 @@ const Hero = () => {
       
         <img  src={silver} alt="silver effect" className="silver-effect" />
         <div className="hero-text">
-          <img className="hero-title"  src={pro} alt="" />
+          <img className="hero-title" style={{mixBlendMode:"screen"}} src={pro} alt="" />
           
           <p className="hero-intro">
             Hey, I’m <span className="highlight">Deepak 👋</span> A web developer who loves crafting 

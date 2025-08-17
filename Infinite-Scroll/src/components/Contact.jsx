@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import resumePDF from '../assets/Deepak_Kumar_Resume.pdf';
+import { MdEmail } from "react-icons/md";     // Material Design email
+import { FaPhoneAlt } from "react-icons/fa";  // FontAwesome phone
+import { FaGithub } from "react-icons/fa";    // FontAwesome GitHub
 
 const Contact = () => {
 
@@ -109,27 +112,27 @@ const downloadResumeMethod2 = () => {
     }
   };
 
-  const contactInfo = [
-    {
-      icon: '📧',
-      title: 'Email',
-      value: 'd.deepakkumaryadav9162@gmail.com',
-      link: 'mailto:d.deepakkumaryadav9162@gmail.com'
-    },
-    {
-      icon: '📱',
-      title: 'Phone',
-      value: '+91-9162070486',
-      link: 'tel:+919162070486'
-    },
-    {
-      icon: '🔗',
-      title: 'GitHub',
-      value: 'github.com/cs-Deepak',
-      link: 'https://github.com/cs-Deepak'
-    }
+const contactInfo = [
+  {
+    icon: <MdEmail size={22} color="#FFD700" />,
+    title: 'Email',
+    value: 'd.deepakkumaryadav9162@gmail.com',
+    link: 'mailto:d.deepakkumaryadav9162@gmail.com'
+  },
+  {
+    icon: <FaPhoneAlt size={22} color="#FFD700" />,
+    title: 'Phone',
+    value: '+91-9162070486',
+    link: 'tel:+919162070486'
+  },
+  {
+    icon: <FaGithub size={22} color="#FFD700" />,
+    title: 'GitHub',
+    value: 'github.com/cs-Deepak',
+    link: 'https://github.com/cs-Deepak'
+  }
+];
 
-  ];
 
 
 
