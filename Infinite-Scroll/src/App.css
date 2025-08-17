@@ -11,6 +11,7 @@ html, body {
 #root, .main {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden; /* ensure no horizontal scroll */
 }
 
 /* Dancing Script utility classes */
@@ -82,6 +83,8 @@ body {
 /* Demo section */
 .main-demo {
   width: 100%;
+  max-width: 1200px;   /* added to prevent overflow */
+  margin: 0 auto;      /* center align */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -89,6 +92,7 @@ body {
   padding: 40px 20px;
   background-color: #E1DAD8;
   text-align: left;
+  box-sizing: border-box;
 }
 .main-demo .img-demo {
   flex: 1;
@@ -99,6 +103,7 @@ body {
   flex: 1;
   color: black;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Portfolio text */
@@ -109,11 +114,13 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   padding: 20px;
+  box-sizing: border-box;
 }
 .portfolio-text .title {
   font-size: 5rem;
   font-family: "Roboto", sans-serif;
   line-height: 1.2;
+  word-break: break-word;
 }
 .portfolio-text .para1 {
   font-size: 2rem;
@@ -146,8 +153,15 @@ body {
 }
 
 @media (max-width: 768px) {
-  .main-demo { flex-direction: column; text-align: center; }
-  .portfolio-text { align-items: center; text-align: center; }
+  .main-demo { 
+    flex-direction: column; 
+    text-align: center; 
+    padding: 20px; 
+  }
+  .portfolio-text { 
+    align-items: center; 
+    text-align: center; 
+  }
   .portfolio-text .title { font-size: 3rem; }
   .portfolio-text .para1 { font-size: 1.5rem; }
   .portfolio-text .para2 { font-size: 1rem; }

@@ -15,10 +15,7 @@ const Hero = () => {
         <img  src={silver} alt="silver effect" className="silver-effect" />
         <div className="hero-text">
           <img className="hero-title"  src={pro} alt="" />
-          {/* <h1 className="hero-title">DEEPAK KUMAR <br /> YADAV</h1>
-          <h2 className="hero-role">MERN STACK DEVELOPER</h2> */}
-
-          <img src="" alt="" />
+          
           <p className="hero-intro">
             Hey, I’m <span className="highlight">Deepak 👋</span> A web developer who loves crafting 
             beautiful, functional websites. I turn ideas into clean, responsive, 

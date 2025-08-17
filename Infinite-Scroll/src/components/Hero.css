@@ -13,9 +13,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 10%;
+  padding: 70px 10%;
   flex-wrap: wrap;
   position: relative;
+  
 }
 
 /* Left Silver BG */
@@ -33,6 +34,7 @@ body {
 .hero-text {
   max-width: 600px;
   z-index: 2;
+  margin-left: 12%;
 }
 
 .hero-title {
@@ -100,7 +102,7 @@ body {
 .hero-right {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 
 .profile-img {
