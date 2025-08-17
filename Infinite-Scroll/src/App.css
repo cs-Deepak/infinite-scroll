@@ -1,9 +1,12 @@
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;
+  overflow-x: hidden;  /* yeh line sabse important hai */
 }
+
+
 
 #root {
   width: 100%;
@@ -171,18 +174,17 @@ body {
   color: black;
 }
 
+
+
 .portfolio-text {
-  max-width:100% ;
-  position: relative;
   display: flex;
   flex-direction: column;
-  text-align: end;
-  margin-right: 20%;
-  padding-right: 80px;
-  margin-bottom: 275px;
-  
-  
+  align-items: flex-start; /* ya flex-end */
+  margin: 0 auto;
+  max-width: 1200px;  /* optional */
+  padding: 20px;
 }
+
 
 .portfolio-text .title {
   font-size: 170px;
