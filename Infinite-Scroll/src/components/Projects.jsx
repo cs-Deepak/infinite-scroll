@@ -3,6 +3,14 @@ import "./projects.css";
 import carimg from "../assets/laracar.png";
 import todo from "../assets/project2.png";
 import sign from "../assets/quicksign.png";
+import q1 from "../assets/q1.png";
+import q2 from "../assets/q2.png";
+import t1 from "../assets/t1.png";
+import t2 from "../assets/t2.png";
+import c1 from "../assets/c1.png";
+import c2 from "../assets/c2.png";
+import c3 from "../assets/c3.png";
+
 
 
 const projectsData = [
@@ -12,10 +20,11 @@ const projectsData = [
     description: "A full-stack project built with HTML, CSS, JavaScript and PHP.",
     images: [
       carimg,
-      todo,
-      carimg
+      c1,
+      c2,
+      c3
     ],
-    github: "https://github.com/yourusername/car-showroom",
+    github: "https://github.com/cs-Deepak/Lara_Car",
     live: "https://lara-car-r3qg.vercel.app/",
   },
   {
@@ -23,11 +32,23 @@ const projectsData = [
     title: "Todo App",
     description: "A MERN stack based Todo application with Google OAuth authentication.",
     images: [
-       carimg,
+       t1,
       todo,
-      carimg
+      t2
     ],
-    github: "https://github.com/yourusername/todo-app",
+    github: "https://github.com/cs-Deepak/todo",
+    live: "https://todo-ugwc.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "PDF Signage Platform",
+    description: "A MERN stack based Todo application with Google OAuth authentication.",
+    images: [
+       sign,
+      q1,
+      q2
+    ],
+    github: "https://github.com/cs-Deepak/BoloSign-Assignment",
     live: "https://todo-ugwc.vercel.app/",
   },
 ];
