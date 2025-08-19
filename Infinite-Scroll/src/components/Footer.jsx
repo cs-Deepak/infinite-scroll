@@ -38,6 +38,7 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Deepak Kumar Yadav | All Rights Reserved</p>
+        
       </div>
     </footer>
   );
