@@ -23,10 +23,15 @@ const Footer = () => {
 
         {/* Right Section - Social Icons */}
         <div className="footer-social">
-          <a href="mailto:yourmail@gmail.com"><FaEnvelope /></a>
-          <a href="https://github.com/yourgithub" target="_blank"><FaGithub /></a>
-          <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><FaLinkedin /></a>
-          <a href="https://twitter.com/yourtwitter" target="_blank"><FaTwitter /></a>
+         <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=d.deepakkumaryadav9162@gmail.com" 
+            target="_blank"
+          >
+            <FaEnvelope />
+          </a>
+          <a href="https://github.com/cs-Deepak" target="_blank"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/deepak-kumar-yadav-5559562b7/" target="_blank"><FaLinkedin /></a>
+          {/* <a href="https://twitter.com/yourtwitter" target="_blank"><FaTwitter /></a> */}
         </div>
       </div>
 
