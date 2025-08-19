@@ -83,9 +83,9 @@ useEffect(() => {
         <FaJsSquare className="floating-icon" />
         <FaCode className="floating-icon" />
          <FaHtml5 className="floating-icon" />
-  <FaCss3Alt className="floating-icon" />
-  <FaGithub className="floating-icon" />
-  <FaGitAlt className="floating-icon" />
+        <FaCss3Alt className="floating-icon" />
+        <FaGithub className="floating-icon" />
+        <FaGitAlt className="floating-icon" />
       </div>
         <img src={profile} alt="Profile" className="profile-img" />
       </div>
