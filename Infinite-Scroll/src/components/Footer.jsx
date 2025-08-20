@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Footer.css";
-import { FaGithub, FaLinkedin, FaEnvelope, FaReact, FaNodeJs, FaDatabase, FaJsSquare, FaCode, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaReact, FaNodeJs, FaDatabase, FaJsSquare, FaCode, FaHtml5, FaCss3Alt, FaGitAlt, FaWhatsapp } from "react-icons/fa";
 import { gsap } from "gsap";
 
 const Footer = () => {
@@ -50,6 +50,16 @@ const Footer = () => {
           </a>
           <a href="https://github.com/cs-Deepak" target="_blank" rel="noreferrer"><FaGithub /></a>
           <a href="https://www.linkedin.com/in/deepak-kumar-yadav-5559562b7/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+
+          {/* //whatsapp ico  */}
+          <a
+                href="https://wa.me/9162070486?text=Hello%20Deepak%2C%20I%20want%20to%20connect%20with%20you."
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                <FaWhatsapp /> 
+              </a>
         </div>
       </div>
 

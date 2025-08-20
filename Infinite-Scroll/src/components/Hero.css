@@ -2,6 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
          
+
+/* whatsapp button css */
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background: #1bee68;
+  color: black;
+}
 /* floating  */
 .floating-icons {
   position: absolute;
@@ -307,6 +319,8 @@ body {
   }
 }
 
+
+
 @media (max-width: 600px) {
   .hero-title {
    
@@ -324,6 +338,7 @@ body {
     width: 180px;
     height: 180px;
   }
+
 }
 
 

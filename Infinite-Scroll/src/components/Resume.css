@@ -1,10 +1,54 @@
-/* Resume Component Specific Styles - No Global Impact */
+/* Resume Component Specific Styles - Dark Theme Match */
 
 /* Resume Container */
 .deepak-resume-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f1f5f9 0%, #dbeafe 50%, #e0e7ff 100%);
+  /* background: #000; */
+  position: relative;
+  overflow: hidden;
   padding: 1rem;
+  max-width: max-content;
+  
+}
+
+/* Background with liquid image matching hero section */
+.deepak-resume-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+   /* background-image: url('../assets/liquid.jpg'); */
+  background-size: cover;
+ 
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 1;
+  filter: blur(1px);
+}
+
+.deepak-resume-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px),
+    radial-gradient(ellipse at top left, rgba(255,165,0,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(255,20,147,0.08) 0%, transparent 50%);
+  background-size: 50px 50px, 100% 100%, 100% 100%;
+  animation: backgroundMove 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes backgroundMove {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(-50px, -50px) rotate(360deg); }
 }
 
 @media (min-width: 768px) {
@@ -14,20 +58,24 @@
 }
 
 .deepak-resume-card {
-  max-width: 72rem;
+  max-width: 100%;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px);
   border-radius: 1.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 /* Header Section */
 .deepak-header-section {
   position: relative;
-  background: linear-gradient(90deg, #2563eb 0%, #9333ea 50%, #4338ca 100%);
+  background: linear-gradient(90deg, #ff6b35 0%, #f7931e 50%, #ffa500 100%);
   padding: 2rem;
 }
 
@@ -72,12 +120,14 @@
   justify-content: center;
   backdrop-filter: blur(16px);
   border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(255,165,0,0.3);
 }
 
 .deepak-profile-initials {
   font-size: 2.25rem;
   font-weight: 700;
   color: white;
+  text-shadow: 0 0 10px rgba(255,165,0,0.5);
 }
 
 .deepak-profile-circle-img{
@@ -105,6 +155,7 @@
   color: white;
   margin-bottom: 0.5rem;
   letter-spacing: -0.025em;
+  text-shadow: 0 0 20px rgba(255,165,0,0.4);
 }
 
 @media (min-width: 768px) {
@@ -115,7 +166,7 @@
 
 .deepak-main-subtitle {
   font-size: 1.25rem;
-  color: #bfdbfe;
+  color: rgba(255,255,255,0.9);
   margin-bottom: 1rem;
   font-weight: 500;
 }
@@ -140,11 +191,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   padding: 0.75rem 1rem;
   border-radius: 2rem;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -154,6 +205,7 @@
 .deepak-contact-item:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255,165,0,0.3);
 }
 
 .deepak-contact-item span {
@@ -166,6 +218,8 @@
   display: grid;
   gap: 2rem;
   padding: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -192,11 +246,12 @@
 .deepak-section-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #fff;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-shadow: 0 0 10px rgba(255,165,0,0.3);
 }
 
 .deepak-section-icon {
@@ -206,31 +261,35 @@
 
 /* About Section */
 .deepak-about-section {
-  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  background: rgba(255,165,0,0.1);
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid #bfdbfe;
+  border: 1px solid rgba(255,165,0,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .deepak-about-icon {
-  color: #2563eb;
+  color: #ffa500;
 }
 
 .deepak-about-text {
-  color: #4b5563;
+  color: rgba(255,255,255,0.9);
   line-height: 1.625;
 }
 
 /* Skills Section */
 .deepak-skills-section {
-  background: linear-gradient(135deg, #fdf2f8 0%, #fcf4ff 100%);
+  background: rgba(255,20,147,0.1);
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid #e879f9;
+  border: 1px solid rgba(255,20,147,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .deepak-skills-icon {
-  color: #9333ea;
+  color: #ff1493;
 }
 
 .deepak-skills-grid {
@@ -246,66 +305,75 @@
   font-weight: 500;
   text-align: center;
   border: 1px solid;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.deepak-skill-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255,165,0,0.3);
 }
 
 .deepak-skill-html {
-  background-color: #fed7aa;
-  color: #c2410c;
-  border-color: #fdba74;
+  background: rgba(255,165,0,0.2);
+  color: #ffa500;
+  border-color: rgba(255,165,0,0.3);
 }
 
 .deepak-skill-css {
-  background-color: #dbeafe;
-  color: #1d4ed8;
-  border-color: #93c5fd;
+  background: rgba(0,191,255,0.2);
+  color: #00bfff;
+  border-color: rgba(0,191,255,0.3);
 }
 
 .deepak-skill-js {
-  background-color: #fef3c7;
-  color: #a16207;
-  border-color: #fde047;
+  background: rgba(255,215,0,0.2);
+  color: #ffd700;
+  border-color: rgba(255,215,0,0.3);
 }
 
 .deepak-skill-react {
-  background-color: #cffafe;
-  color: #0e7490;
-  border-color: #67e8f9;
+  background: rgba(0,255,255,0.2);
+  color: #00ffff;
+  border-color: rgba(0,255,255,0.3);
 }
 
 .deepak-skill-express {
-  background-color: #d1fae5;
-  color: #047857;
-  border-color: #6ee7b7;
+  background: rgba(144,238,144,0.2);
+  color: #90ee90;
+  border-color: rgba(144,238,144,0.3);
 }
 
 .deepak-skill-mongo {
-  background-color: #d1fae5;
-  color: #065f46;
-  border-color: #34d399;
+  background: rgba(50,205,50,0.2);
+  color: #32cd32;
+  border-color: rgba(50,205,50,0.3);
 }
 
 .deepak-skill-git {
-  background-color: #f3f4f6;
-  color: #374151;
-  border-color: #d1d5db;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border-color: rgba(255,255,255,0.3);
 }
 
 .deepak-skill-cpp {
-  background-color: #e0e7ff;
-  color: #3730a3;
-  border-color: #c7d2fe;
+  background: rgba(138,43,226,0.2);
+  color: #8a2be2;
+  border-color: rgba(138,43,226,0.3);
 }
 
 /* Interests Section */
 .deepak-interests-section {
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  background: rgba(50,205,50,0.1);
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid #6ee7b7;
+  border: 1px solid rgba(50,205,50,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .deepak-interests-icon {
-  color: #059669;
+  color: #32cd32;
 }
 
 .deepak-interests-list {
@@ -315,25 +383,28 @@
 }
 
 .deepak-interest-tag {
-  background-color: #d1fae5;
-  color: #047857;
+  background: rgba(50,205,50,0.2);
+  color: #32cd32;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid #6ee7b7;
+  border: 1px solid rgba(50,205,50,0.3);
+  backdrop-filter: blur(5px);
 }
 
 /* Education Section */
 .deepak-education-section {
-  background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+  background: rgba(255,215,0,0.1);
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid #fbbf24;
+  border: 1px solid rgba(255,215,0,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .deepak-education-icon {
-  color: #d97706;
+  color: #ffd700;
 }
 
 .deepak-education-list {
@@ -343,10 +414,17 @@
 }
 
 .deepak-education-item {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
   padding: 1rem;
   border-radius: 0.75rem;
-  border: 1px solid #fbbf24;
+  border: 1px solid rgba(255,215,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.deepak-education-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .deepak-education-header {
@@ -360,76 +438,88 @@
 
 .deepak-education-title {
   font-weight: 600;
-  color: #1f2937;
+  color: #fff;
   flex: 1;
   min-width: 200px;
 }
 
 .deepak-education-year {
   font-size: 0.875rem;
-  color: #d97706;
-  background-color: #fbbf24;
+  color: #000;
+  background: linear-gradient(45deg, #ffd700, #ffa500);
   padding: 0.25rem 0.5rem;
   border-radius: 9999px;
   flex-shrink: 0;
+  font-weight: 600;
 }
 
 .deepak-education-institute {
-  color: #4b5563;
+  color: rgba(255,255,255,0.8);
   margin-bottom: 0.25rem;
 }
 
 .deepak-education-grade {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: rgba(255,255,255,0.7);
 }
 
 /* Experience Section */
 .deepak-experience-section {
-  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+  background: rgba(255,20,147,0.1);
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid #f9a8d4;
+  border: 1px solid rgba(255,20,147,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .deepak-experience-icon {
-  color: #ec4899;
+  color: #ff1493;
 }
 
 .deepak-experience-item {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
   padding: 1rem;
   border-radius: 0.75rem;
-  border: 1px solid #f9a8d4;
+  border: 1px solid rgba(255,20,147,0.2);
+  transition: all 0.3s ease;
+}
+
+.deepak-experience-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .deepak-experience-title {
   font-weight: 600;
-  color: #1f2937;
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
 .deepak-experience-company {
-  color: #4b5563;
+  color: rgba(255,255,255,0.8);
   margin-bottom: 0.5rem;
 }
 
 .deepak-experience-description {
-  color: #4b5563;
+  color: rgba(255,255,255,0.8);
   font-size: 0.875rem;
   line-height: 1.625;
 }
 
 /* Projects Section */
 .deepak-projects-section {
-  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  background: rgba(138,43,226,0.1);
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid #8b5cf6;
+  border: 1px solid rgba(138,43,226,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .deepak-projects-icon {
-  color: #8b5cf6;
+  color: #8a2be2;
 }
 
 .deepak-projects-list {
@@ -439,15 +529,17 @@
 }
 
 .deepak-project-item {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
   padding: 1rem;
   border-radius: 0.75rem;
-  border: 1px solid #c4b5fd;
+  border: 1px solid rgba(138,43,226,0.2);
   transition: all 0.3s ease;
 }
 
 .deepak-project-item:hover {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(138,43,226,0.3);
   transform: translateY(-2px);
 }
 
@@ -461,22 +553,23 @@
 
 .deepak-project-title {
   font-weight: 600;
-  color: #1f2937;
+  color: #fff;
   flex: 1;
 }
 
 .deepak-project-link {
-  color: #8b5cf6;
+  color: #8a2be2;
   transition: color 0.3s ease;
   flex-shrink: 0;
 }
 
 .deepak-project-link:hover {
-  color: #7c3aed;
+  color: #9932cc;
+  text-shadow: 0 0 10px rgba(138,43,226,0.5);
 }
 
 .deepak-project-description {
-  color: #4b5563;
+  color: rgba(255,255,255,0.8);
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
   line-height: 1.5;
@@ -489,12 +582,14 @@
 }
 
 .deepak-project-tag {
-  background-color: #c4b5fd;
-  color: #6d28d9;
+  background: rgba(138,43,226,0.2);
+  color: #8a2be2;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.75rem;
   font-weight: 500;
+  border: 1px solid rgba(138,43,226,0.3);
+  backdrop-filter: blur(5px);
 }
 
 /* Responsive Design - Enhanced */

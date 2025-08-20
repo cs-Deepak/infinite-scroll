@@ -114,19 +114,19 @@ const downloadResumeMethod2 = () => {
 
 const contactInfo = [
   {
-    icon: <MdEmail size={22} color="#FFD700" />,
+    icon: <MdEmail size={22} color="#000000ff" />,
     title: 'Email',
     value: 'd.deepakkumaryadav9162@gmail.com',
     link: 'mailto:d.deepakkumaryadav9162@gmail.com'
   },
   {
-    icon: <FaPhoneAlt size={22} color="#FFD700" />,
+    icon: <FaPhoneAlt size={22} color="#000000ff" />,
     title: 'Phone',
     value: '+91-9162070486',
     link: 'tel:+919162070486'
   },
   {
-    icon: <FaGithub size={22} color="#FFD700" />,
+    icon: <FaGithub size={22} color="#000000ff" />,
     title: 'GitHub',
     value: 'github.com/cs-Deepak',
     link: 'https://github.com/cs-Deepak'
@@ -158,7 +158,9 @@ const quickActions = [
             <p>Ready to bring your ideas to life? I'm here to help you build amazing web experiences.</p>
           </div>
           <div className="header-visual">
+            
             <div className="floating-icons">
+              
               <span className="icon">⚛️</span>
               <span className="icon">💻</span>
               <span className="icon">🚀</span>

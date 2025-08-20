@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       
-
+    
       <section id="home">
        <Hero />
       </section>

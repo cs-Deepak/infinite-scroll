@@ -6,7 +6,7 @@ import resume from "../assets/Deepak_Kumar_Resume.pdf";
 import silver from "../assets/liquid.jpg"; 
 //floating icons
 import { gsap } from "gsap";
-import { FaReact, FaNodeJs, FaDatabase, FaJsSquare, FaCode,  FaHtml5, FaCss3Alt, FaGithub, FaGitAlt  } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaDatabase, FaJsSquare, FaCode,  FaHtml5, FaCss3Alt, FaGithub, FaGitAlt, FaWhatsapp   } from "react-icons/fa";
 
 const Hero = () => {
   // floating icons animation
@@ -69,6 +69,15 @@ useEffect(() => {
             <a href="#contact" className="btn secondary">
               Contact Me
             </a>
+              {/* WhatsApp Button */}
+              <a
+                href="https://wa.me/9162070486?text=Hello%20Deepak%2C%20I%20want%20to%20connect%20with%20you."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn secondary btn-whatsapp"
+              >
+                <FaWhatsapp /> WhatsApp
+              </a>
           </div>
         </div>
       </div>

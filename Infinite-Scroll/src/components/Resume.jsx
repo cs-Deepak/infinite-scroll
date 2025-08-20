@@ -9,38 +9,9 @@ const Resume = () => {
       <div className="deepak-resume-card">
         
         {/* Header Section */}
-        <div className="deepak-header-section">
-          <div className="deepak-header-overlay"></div>
-          <div className="deepak-header-content">
-            <div className="deepak-header-flex">
-              <div className="deepak-profile-circle">
-                <span className="deepak-profile-initials"><img className='deepak-profile-circle-img' src={profile} style={{borderRadius:"50%"}} alt="" /></span>
-              </div>
-              <div className="deepak-header-info">
-                <h1 className="deepak-main-title">
-                  Deepak Kumar Yadav
-                </h1>
-                <p className="deepak-main-subtitle">
-                  4th Year B.Tech CSE Student & Frontend Developer
-                </p>
-                <div className="deepak-contact-info">
-                  <div className="deepak-contact-item">
-                    <Phone size={16} />
-                    <span>+91-9162070486</span>
-                  </div>
-                  <div className="deepak-contact-item">
-                    <Mail size={16} />
-                    <span>d.deepakkumaryadav9162@gmail.com</span>
-                  </div>
-                  <div className="deepak-contact-item">
-                    <Github size={16} />
-                    <a style={{textDecoration:"none", color:"white" }} target='_blank'rel="noopener noreferrer" href="https://github.com/cs-Deepak">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* <div className="deepak-header-section">
+       
+        </div> */}
 
         <div className="deepak-main-grid">
           
@@ -109,7 +80,7 @@ const Resume = () => {
                     <span className="deepak-education-year">2022 - 2026</span>
                   </div>
                   <p className="deepak-education-institute">Global Group of Institutes, Amritsar</p>
-                  <p className="deepak-education-grade">SGPA: 6.17</p>
+                
                 </div>
                 
                 <div className="deepak-education-item">
@@ -149,7 +120,7 @@ const Resume = () => {
             </div>
 
             {/* Projects Section */}
-            <div className="deepak-projects-section">
+            {/* <div className="deepak-projects-section">
               <h2 className="deepak-section-title">
                 <Database className="deepak-section-icon deepak-projects-icon" size={24} />
                 Projects
@@ -207,7 +178,7 @@ const Resume = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
