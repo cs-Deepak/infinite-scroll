@@ -11,43 +11,30 @@ import c1 from "../assets/c1.png";
 import c2 from "../assets/c2.png";
 import c3 from "../assets/c3.png";
 
-
-
 const projectsData = [
   {
     id: 1,
     title: "Car Showroom Website",
     description: "A full-stack project built with HTML, CSS, JavaScript and PHP.",
-    images: [
-      carimg,
-      c1,
-      c2,
-      c3
-    ],
+    images: [carimg, c1, c2, c3],
     github: "https://github.com/cs-Deepak/Lara_Car",
     live: "https://lara-car-r3qg.vercel.app/",
   },
   {
     id: 2,
     title: "Todo App",
-    description: "A MERN stack based Todo application with Google OAuth authentication.",
-    images: [
-       t1,
-      todo,
-      t2
-    ],
+    description:
+      "A MERN stack based Todo application with Google OAuth authentication.",
+    images: [t1, todo, t2],
     github: "https://github.com/cs-Deepak/todo",
     live: "https://todo-ugwc.vercel.app/",
   },
   {
     id: 3,
     title: "PDF Signage Platform",
-    description: "A MERN stack based PDF signing platform with user authentication and file upload.",
-    images: [
-       sign,
-      q1,
-      q2
-    ],
+    description:
+      "A MERN stack based PDF signing platform with user authentication and file upload.",
+    images: [sign, q1, q2],
     github: "https://github.com/cs-Deepak/BoloSign-Assignment",
     live: "https://quicksign3.netlify.app/",
   },
@@ -68,18 +55,28 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div className="project-card">
-      <img
-        src={project.images[currentIndex]}
-        alt={project.title}
-        className="project-img"
-      />
+      <div className="slider-container">
+        {project.images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={project.title}
+            className={`project-img ${index === currentIndex ? "active" : ""}`}
+          />
+        ))}
+      </div>
       <h3 className="project-title">{project.title}</h3>
       <p className="project-desc">{project.description}</p>
       <div className="project-links">
         <a href={project.github} target="_blank" rel="noreferrer" className="btn">
           GitHub
         </a>
-        <a href={project.live} target="_blank" rel="noreferrer" className="btn live-btn">
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noreferrer"
+          className="btn live-btn"
+        >
           <span className="demo-live-buttom" style={{ color: "white" }}>
             Live Demo
           </span>
