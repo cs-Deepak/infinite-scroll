@@ -42,14 +42,14 @@ const projectsData = [
   {
     id: 3,
     title: "PDF Signage Platform",
-    description: "A MERN stack based Todo application with Google OAuth authentication.",
+    description: "A MERN stack based PDF signing platform with user authentication and file upload.",
     images: [
        sign,
       q1,
       q2
     ],
     github: "https://github.com/cs-Deepak/BoloSign-Assignment",
-    live: "https://todo-ugwc.vercel.app/",
+    live: "https://quicksign3.netlify.app/",
   },
 ];
 
