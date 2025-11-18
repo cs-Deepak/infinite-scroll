@@ -27,7 +27,7 @@ const projectsData = [
       "A MERN stack based Todo application with Google OAuth authentication.",
     images: [t1, todo, t2],
     github: "https://github.com/cs-Deepak/todo",
-    live: "https://todo-ugwc.vercel.app/",
+    live: "https://todo-1-6mzd.onrender.com/",
   },
   {
     id: 3,
