@@ -43,6 +43,9 @@ const Resume = () => {
                 <div className="deepak-skill-item deepak-skill-js">JavaScript</div>
                 <div className="deepak-skill-item deepak-skill-react">ReactJs</div>
                 <div className="deepak-skill-item deepak-skill-express">ExpressJs</div>
+                <div className="deepak-skill-item deepak-skill-express">NodeJs</div>
+                <div className="deepak-skill-item deepak-skill-express">NestJs</div>
+                <div className="deepak-skill-item deepak-skill-express">Nextjs</div>
                 <div className="deepak-skill-item deepak-skill-mongo">MongoDB</div>
                 <div className="deepak-skill-item deepak-skill-git">Git & GitHub</div>
                 <div className="deepak-skill-item deepak-skill-cpp">C++</div>
