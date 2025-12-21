@@ -10,10 +10,9 @@ import Hero from './components/Hero'
 const App = () => {
   return (
     <>
-      
-    
+      <NavbarMain />
       <section id="home">
-       <Hero />
+        <Hero />
       </section>
 
       <section id="projects">
