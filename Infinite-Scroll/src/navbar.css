@@ -180,38 +180,49 @@
         transition: all 0.4s ease-in-out;
         background: rgba(15, 15, 15, 0.98);
         backdrop-filter: blur(15px);
-        padding-top: 80px;
-        /* Space for top bar */
+        padding-top: 100px;
         justify-content: flex-start;
-        /* Align content to top */
         align-items: center;
-        gap: 20px;
+        gap: 15px;
+        /* Reduced gap */
     }
 
     .nav-menu.active {
         left: 0;
         opacity: 1;
         z-index: 998;
-        /* Below the menu icon */
     }
 
     .nav-item {
         height: auto;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        /* Center item content */
     }
 
     .nav-links {
         text-align: center;
-        padding: 1.5rem;
-        width: 100%;
+        padding: 10px 0;
+        /* Reduced padding */
+        width: auto;
+        /* Let content dictate width */
         display: block;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        /* Reduced font size from 1.5rem */
         color: #fff;
+        letter-spacing: 0.5px;
     }
 
     .nav-links:hover {
         color: #F89B29;
         background: transparent;
+        transform: scale(1.05);
+        /* Subtle zoom instead of background change */
+    }
+
+    .nav-links::after {
+        display: none;
     }
 
     .menu-icon {
@@ -220,7 +231,8 @@
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        /* Slightly smaller icon */
         cursor: pointer;
         z-index: 999;
     }
@@ -233,32 +245,38 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
-        margin-top: 20px;
-        width: 80%;
+        /* Reduced gap */
+        margin-top: 30px;
+        width: 100%;
+        align-items: center;
     }
 
     .action-btn {
-        width: 100%;
-        padding: 14px;
-        border-radius: 12px;
+        width: 250px;
+        /* Fixed width for better look */
+        padding: 12px;
+        /* Slightly smaller padding */
+        border-radius: 50px;
+        /* Rounded pill shape */
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 500;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        font-size: 1.1rem;
+        gap: 8px;
+        font-size: 1rem;
+        /* Smaller font */
         transition: transform 0.2s;
     }
 
     .action-btn:active {
-        transform: scale(0.98);
+        transform: scale(0.95);
     }
 
     .whatsapp-btn {
         background: #25d366;
         color: white;
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
     }
 
     .resume-btn {
