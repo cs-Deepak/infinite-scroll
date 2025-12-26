@@ -6,6 +6,7 @@ import sign from "../assets/quicksign.png";
 import q1 from "../assets/q1.png";
 import q2 from "../assets/q2.png";
 import t1 from "../assets/t1.png";
+import t3 from "../assets/t3.png";
 import t2 from "../assets/t2.png";
 import c1 from "../assets/c1.png";
 import c2 from "../assets/c2.png";
@@ -25,7 +26,7 @@ const projectsData = [
     title: "Todo App",
     description:
       "A MERN stack based Todo application with Google OAuth authentication.",
-    images: [t1, todo, t2],
+    images: [t1, t3, t2],
     github: "https://github.com/cs-Deepak/todo",
     live: "https://todo-1-6mzd.onrender.com/",
   },
