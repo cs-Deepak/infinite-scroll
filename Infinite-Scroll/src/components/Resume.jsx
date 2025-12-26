@@ -38,7 +38,7 @@ const Resume = () => {
                 About Me
               </h2>
               <p className="deepak-about-text">
-                I am a frontend developer who enjoys making websites that look
+                I am a Full Stack developer who enjoys making websites that look
                 good and work well on all devices. I like learning new tools and
                 technologies to improve my skills. My goal is to build websites
                 that are easy to use and give a smooth experience to users.

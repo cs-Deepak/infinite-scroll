@@ -213,6 +213,22 @@
   color: rgba(255,255,255,0.8);
   margin-bottom: 15px;
   line-height: 1.5;
+  
+  /* Initial state: truncated */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-desc,
+.project-desc.expanded {
+  /* Expanded state */
+  -webkit-line-clamp: unset;
+  display: block;
 }
 
 .project-links {
